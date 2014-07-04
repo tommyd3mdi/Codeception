@@ -105,7 +105,6 @@ class Cest extends Cept
         $text = $this->testMethod;
         $text = preg_replace('/([A-Z]+)([A-Z][a-z])/', '\\1 \\2', $text);
         $text = preg_replace('/([a-z\d])([A-Z])/', '\\1 \\2', $text);
-        $text = strtolower($text);
         return $text;
     }
 
