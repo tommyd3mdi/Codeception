@@ -109,13 +109,13 @@ class Compiler
         }
 
         $phar->addFromString($path, $content);
-        $phar[$path]->compress(\Phar::BZ2);
+        $phar[$path]->compress(\Phar::GZ);
     }
 
     public function setMainExecutable($phar)
     {
         $phar->addFromString('codecept', file_get_contents($this->compileDir.'/package/bin'));
-        $phar['codecept']->compress(\Phar::BZ2);
+        $phar['codecept']->compress(\Phar::GZ);
     }
 
     public function setStub($phar)
